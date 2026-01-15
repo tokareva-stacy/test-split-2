@@ -1,0 +1,102 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header {
+  width: 100%;
+  padding: 0;
+
+  &__top {
+    background-color: v.$black;
+    text-align: center;
+    padding: 6px 10px;
+  }
+
+  &__promo {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: v.$white;
+  }
+
+  &__nav {
+    background-color: v.$white;
+    @include m.desktop {
+      background-color: #e3e3e3;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  &__right {
+    justify-content: flex-end;
+  }
+  &__mobile-icons {
+    display: flex;
+    gap: 16px;
+
+    @include m.desktop {
+      display: none;
+    }
+  }
+
+  &__logo {
+    text-align: center;
+
+    &-img {
+      width: 121px;
+
+      @include m.desktop {
+        width: 264px;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 16px;
+  }
+  .icon-link {
+    height: 24px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: currentColor;
+    color: currentColor;
+    background-color: transparent;
+  }
+  .icon-link:hover {
+    fill: #605e5c;
+  }
+  .icon-burger,
+  .icon-search-mob,
+  .arr-down,
+  .icon-search,
+  .icon-user,
+  .icon-cart {
+    fill: transparent;
+    stroke: #212322;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .icon-burger:hover,
+  .icon-search-mob:hover,
+  .arr-down:hover,
+  .icon-search:hover,
+  .icon-user:hover,
+  .icon-cart:hover {
+    stroke: #605e5c;
+  }
+  .icon-search,
+  .icon-user {
+    display: none;
+  }
+  @include m.desktop {
+    display: flex;
+  }
+}

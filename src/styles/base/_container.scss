@@ -1,0 +1,21 @@
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding: 0 36px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    padding: 0 56px;
+  }
+}
+
+.section {
+  width: 100%;
+}

@@ -1,0 +1,39 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.nav {
+  display: none;
+
+  @include m.desktop {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__item {
+    position: relative;
+
+    &--has-submenu:hover {
+      .nav__submenu {
+        display: block;
+      }
+
+      .nav__arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: v.$black;
+  }
+
+  &__submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: #fff;
+  }
+}

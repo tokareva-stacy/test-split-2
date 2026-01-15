@@ -1,19 +1,78 @@
-<header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+<header class="header section">
+  <!-- TOP BAR -->
+  <div class="header__top">
+    <div class="container">
+      <p class="header__promo">FREE UNITED KINGDOM SHIPPING $200 +</p>
+    </div>
   </div>
+  <!-- NAV -->
+  <nav class="header__nav">
+    <div class="container header__container">
+      <!-- LEFT -->
+      <div class="header__left">
+        <div class="header__mobile-icons">
+          <button class="icon-link" data-menu-open>
+            <svg class="icon-burger" width="24" height="24">
+              <use href="/icons/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+          <a href="#" class="icon-link">
+            <svg class="icon-search-mob" width="24" height="24">
+              <use href="/icons/sprite.svg#icon-search"></use>
+            </svg>
+          </a>
+        </div>
+
+        <!-- DESKTOP NAV -->
+        <ul class="nav">
+          <li class="nav__item"><a href="#" class="nav__link">Crew Necks</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">V-Necks</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Activewear</a></li>
+          <li class="nav__item nav__item--has-submenu">
+            <a href="#" class="nav__link">
+              <span class="nav__text">Bundles</span>
+              <svg class="nav__arrow" width="24" height="24">
+                <use href="/icons/sprite.svg#icon-arrow-down"></use>
+              </svg>
+            </a>
+            <ul class="nav__submenu">
+              <li><a href="#" class="nav__submenu-link">Bundles 1</a></li>
+              <li><a href="#" class="nav__submenu-link">Bundles 2</a></li>
+              <li><a href="#" class="nav__submenu-link">Bundles 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- LOGO -->
+      <div class="header__logo">
+        <a href="./index.html" class="logo-link">
+          <img src="/icons/logo.svg" alt="Logo" class="header__logo-img">
+        </a>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="header__right">
+        <div class="header__icons">
+          <a href="#" class="icon-link">
+            <svg class="icon-search" width="24" height="24">
+              <use href="/icons/sprite.svg#icon-search"></use>
+            </svg>
+          </a>
+          <a href="#" class="icon-link">
+            <svg class="icon-user" width="24" height="24">
+              <use href="/icons/sprite.svg#icon-user"></use>
+            </svg>
+          </a>
+          <a href="#" class="icon-link">
+            <svg class="icon-cart" width="24" height="24">
+              <use href="/icons/sprite.svg#icon-cart"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 </header>
+
+<script type="module" src="./js/menu.js"></script>

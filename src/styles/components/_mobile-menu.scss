@@ -1,0 +1,23 @@
+@use '../base/variables' as v;
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 0.3s ease-out;
+
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &__container {
+    width: 50%;
+    background: #fff;
+    padding: 16px;
+  }
+}
