@@ -1,19 +1,29 @@
 <section class="hero section">
+  <img
+    src="/img/hero/banner-photo-min.jpg"
+    srcset="/img/hero/banner-photo@2x-min.jpg 2x"
+    alt="Hero banner"
+    class="hero__img"
+    loading="eager"
+    fetchpriority="high"
+  />
   <div class="container">
-    <div class="hero-content">
-      <div class="hero-content-wrapper">
-        <h1 class="hero-title">
-          <span class="line left">MAKE A</span>
-          <span class="line center"><em>GREAT</em> FIRST</span>
-          <span class="line left">IMPRESSION</span>
+    <div class="hero__content">
+      <div class="hero__text">
+        <h1 class="hero__title">
+          <span class="hero__line hero__line--left">MAKE A</span>
+          <span class="hero__line hero__line--center">
+            <em class="hero__accent">GREAT</em> FIRST
+          </span>
+          <span class="hero__line hero__line--left">IMPRESSION</span>
         </h1>
-        <p class="hero-description">
+
+        <p class="hero__description">
           Add images and text to give focus to your chosen product, collection, or blog post
         </p>
       </div>
-      <div class="hero-button">
-        <a href="#best-sellers">Shop Now</a>
-      </div>
+
+      <a href="#best-sellers" class="hero__button">Shop Now</a>
     </div>
   </div>
 </section>
