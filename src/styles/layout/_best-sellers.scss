@@ -1,3 +1,208 @@
-.decorative-svg-desktop {
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.best-sellers {
+padding: 30px 0;
+background-color: #f1f1f1;
+
+// ===== HEADER =====
+&__header {
+margin-bottom: 16px;
+}
+
+&__top {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-bottom: 2px;
+}
+
+&__title {
+font-weight: 700;
+font-size: 26px;
+line-height: 1.23;
+color: #212322;
+}
+
+&__view-all {
+display: flex;
+align-items: center;
+padding: 6px 0 6px 8px;
+text-decoration: none;
+color: #212322;
+transition: color 250ms ease;
+
+&:hover {
+  color: slategray;
+}
+
+&.is-expanded .best-sellers__arrow {
+  transform: rotate(90deg);
+}
+
+}
+
+&__view-text {
+padding-right: 8px;
+}
+
+&__arrow {
+stroke: #212322;
+fill: transparent;
+transition: transform 250ms ease, stroke 250ms ease;
+}
+
+&__view-all:hover &__arrow {
+stroke: slategray;
+}
+
+// ===== CARD =====
+&__card {
+max-width: 164px;
+position: relative;
+transition: all 0.3s ease;
+}
+
+&__image-wrapper {
+position: relative;
+margin-bottom: 8px;
+overflow: hidden;
+}
+
+&__image {
+width: 100%;
+border-radius: 6px;
+}
+
+// ===== SIZES (hover reveal) =====
+&__sizes {
+position: absolute;
+bottom: 19px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+gap: 4px;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s ease;
+}
+
+&__size {
+width: 40px;
+height: 40px;
+border: none;
+border-radius: 6px;
+background: #212322;
+color: #f1f1f1;
+cursor: pointer;
+transition: background 250ms ease;
+
+
+&:hover {
+  background: #605e5c;
+}
+
+
+}
+
+&__card:hover &__sizes {
+opacity: 1;
+visibility: visible;
+}
+
+// ===== INFO =====
+&__info {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+&__name {
+font-size: 12px;
+margin-bottom: 2px;
+color: #212322;
+}
+
+&__price-current {
+font-size: 14px;
+}
+
+&__price-sale {
+color: #9f1111;
+margin-right: 6px;
+}
+
+&__price-old {
+color: #999;
+text-decoration: line-through;
+font-size: 12px;
+}
+
+// ===== CART =====
+&__cart {
+padding: 6px;
+border: none;
+background: #212322;
+border-radius: 6px;
+cursor: pointer;
+}
+
+&__cart-icon {
+stroke: #fafaf8;
+fill: transparent;
+}
+
+// ===== LABELS =====
+&__label {
+position: absolute;
+top: 7px;
+font-size: 10px;
+padding: 2px 6px;
+border-radius: 2px;
+
+&--selling,
+&--sold-out {
+  left: 0;
+  background: #212322;
+  color: #fafaf8;
+}
+
+&--discount {
+  right: 0;
+  background: #fafaf8;
+  color: #9f1111;
+}
+
+
+}
+
+// ===== MODIFIER =====
+&__card--sold-out {
+opacity: 0.56;
+pointer-events: none;
+}
+
+// ===== DESKTOP =====
+@media (min-width: 1440px) {
+padding: 60px 0;
+
+
+&__title {
+  font-size: 36px;
+}
+
+&__card {
+  max-width: 320px;
+}
+
+&__image {
+  border-radius: 0;
+}
+
+&__cart {
   display: none;
+}
+
+
+}
 }
