@@ -2,61 +2,81 @@
 @use '../base/mixins' as m;
 
 .best-sellers {
-padding: 30px 0;
-background-color: #f1f1f1;
+  padding: 30px 0;
+  background-color: v.$bs-bg;
 
-// ===== HEADER =====
-&__header {
-margin-bottom: 16px;
-}
+  // Header
+  &__header {
+    margin-bottom: 16px;
+  }
 
-&__top {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding-bottom: 2px;
-}
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2px;
+  }
 
-&__title {
-font-weight: 700;
-font-size: 26px;
-line-height: 1.23;
-color: #212322;
-}
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.23;
+    text-transform: capitalize;
+    color: v.$black;
+  }
 
-&__view-all {
-display: flex;
-align-items: center;
-padding: 6px 0 6px 8px;
-text-decoration: none;
-color: #212322;
-transition: color 250ms ease;
+  &__view-all {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    display: flex;
+    align-items: center;
+    padding: 6px 0 6px 8px;
+    text-decoration: none;
+    color: v.$black;
+    transition: color 250ms ease;
 
-&:hover {
-  color: slategray;
-}
+    &:hover {
+      color: v.$gray;
+    }
 
-&.is-expanded .best-sellers__arrow {
-  transform: rotate(90deg);
-}
+    &.is-expanded .best-sellers__arrow {
+      transform: rotate(90deg);
+    }
+  }
 
-}
+  &__view-text {
+    padding-right: 8px;
+  }
 
-&__view-text {
-padding-right: 8px;
-}
+  &__arrow {
+    stroke: v.$black;
+    fill: transparent;
+    transition: transform 250ms ease, stroke 250ms ease;
+  }
 
-&__arrow {
-stroke: #212322;
-fill: transparent;
-transition: transform 250ms ease, stroke 250ms ease;
-}
+  &__view-all:hover &__arrow {
+    stroke: v.$gray;
+  }
 
-&__view-all:hover &__arrow {
-stroke: slategray;
-}
+  // Decor-arrows
+  &__decor-mob {
+    @include m.desktop {
+      display: none;
+    }
+  }
 
-// ===== CARD =====
+  &__decor-desk {
+    display: none;
+
+    @include m.desktop {
+      display: block;
+    }
+  }
+
+
+
+// Card
 &__card {
 max-width: 164px;
 position: relative;
