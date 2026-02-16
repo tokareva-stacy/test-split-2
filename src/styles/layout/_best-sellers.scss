@@ -74,6 +74,23 @@
     }
   }
 
+  // Swiper slider
+  &__slider {
+    overflow: hidden; // ключевая строка!
+  }
+
+  .swiper {
+    overflow: hidden;
+  }
+
+  .swiper-wrapper {
+    box-sizing: border-box;
+  }
+
+  .swiper-slide {
+    height: auto; // чтобы не было странных пересчётов
+  }
+
 
 
 // Card

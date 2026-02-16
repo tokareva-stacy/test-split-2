@@ -2,12 +2,12 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Scrollbar } from 'swiper/modules';
 
-const swiper = new Swiper('.bestsellers-swiper', {
+const swiper = new Swiper('.best-sellers__slider', {
   modules: [Scrollbar],
   slidesPerView: 1.2,
   spaceBetween: 12,
   scrollbar: {
-    el: '.swiper-scrollbar',
+    el: '.best-sellers .swiper-scrollbar',
     draggable: true
   },
   breakpoints: {
