@@ -4,19 +4,21 @@ import { Scrollbar } from 'swiper/modules';
 
 const swiper = new Swiper('.best-sellers__slider', {
   modules: [Scrollbar],
-  slidesPerView: 1.2,
+
+  slidesPerView: 'auto',   // единственный режим!
   spaceBetween: 12,
+  grabCursor: true,
+
   scrollbar: {
     el: '.best-sellers .swiper-scrollbar',
     draggable: true
   },
+
   breakpoints: {
     768: {
-      slidesPerView: 2.5,
-      spaceBetween: 16,
+      spaceBetween: 16,   // меняем только gap!
     },
     1440: {
-      slidesPerView: 4,
       spaceBetween: 24,
     }
   }
